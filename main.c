@@ -26,17 +26,17 @@ int main(){
     Camera2D camera;
     initCamera(&camera);
      
-    Texture2D mapa = LoadTexture("C:\\Users\\luant\\Desktop\\ProjetoPasta\\.vscode\\Assets\\MapaDefinitivo1.png");
-    Texture2D persoIdle = LoadTexture("C:\\Users\\luant\\Desktop\\ProjetoPasta\\.vscode\\Assets\\Idle.png");
-    Texture2D persoRun = LoadTexture("C:\\Users\\luant\\Desktop\\ProjetoPasta\\.vscode\\Assets\\Run.png");
-    Texture2D attack0 = LoadTexture("C:\\Users\\luant\\Desktop\\ProjetoPasta\\.vscode\\Assets\\Attack1.png");
-    Texture2D attack1 = LoadTexture("C:\\Users\\luant\\Desktop\\ProjetoPasta\\.vscode\\Assets\\Attack2.png");
-    Texture2D attack2 = LoadTexture("C:\\Users\\luant\\Desktop\\ProjetoPasta\\.vscode\\Assets\\Attack3.png");
+    Texture2D mapa = LoadTexture("./Assets/MapaDefinitivo1.png");
+    Texture2D persoIdle = LoadTexture("./Assets/Idle.png");
+    Texture2D persoRun = LoadTexture("./Assets/Run.png");
+    Texture2D attack0 = LoadTexture("./Assets/Attack1.png");
+    Texture2D attack1 = LoadTexture("./Assets/Attack2.png");
+    Texture2D attack2 = LoadTexture("./Assets/Attack3.png");
     //----------------------------------------------------------------------------------------------
-    Texture2D vilao1 = LoadTexture("C:\\Users\\luant\\Desktop\\ProjetoPasta\\.vscode\\Assets\\mago.png");
-    Texture2D vilao2 = LoadTexture("C:\\Users\\luant\\Desktop\\ProjetoPasta\\.vscode\\Assets\\ogrodireita.png");
-    Texture2D vilao3 = LoadTexture("C:\\Users\\luant\\Desktop\\ProjetoPasta\\.vscode\\Assets\\ogroesquerda.png");
-    Texture2D torreimg = LoadTexture("C:\\Users\\luant\\Desktop\\CristalTorre-removebg-preview.png");
+    Texture2D vilao1 = LoadTexture("./Assets/mago.png");
+    Texture2D vilao2 = LoadTexture("./Assets/ogrodireita.png");
+    Texture2D vilao3 = LoadTexture("./Assets/ogroesquerda.png");
+    Texture2D torreimg = LoadTexture("./Assets/CristalTorre-removebg-preview.png");
 
     Enemy *Recvilao;
     Recvilao = (Enemy *)malloc(7 * sizeof(Enemy));
@@ -71,14 +71,14 @@ int main(){
     int attackMode = 0, attacking = 0;
     int morreu = 0;
 
-    Sound Tema = LoadSound("C:\\Users\\luant\\Desktop\\ProjetoPasta\\.vscode\\Assets\\Christopher Larkin - Hollow Knight (Original Soundtrack) - 25 Radiance.wav");
+    Sound Tema = LoadSound("./Assets/Christopher Larkin - Hollow Knight (Original Soundtrack) - 25 Radiance.wav");
     SetSoundVolume(Tema, 0.18);
     Sound *efeitos = (Sound*) malloc(4*sizeof(Sound));
 
-    efeitos[0] = LoadSound("C:\\Users\\luant\\Desktop\\ProjetoPasta\\.vscode\\Assets\\Sapons_07_human_atk_sword_1.wav");
-    efeitos[1] = LoadSound("C:\\Users\\luant\\Desktop\\ProjetoPasta\\.vscode\\Assets\\Sapons_07_human_atk_sword_2.wav");
-    efeitos[2] = LoadSound("C:\\Users\\luant\\Desktop\\ProjetoPasta\\.vscode\\Assets\\Sapons_07_human_atk_sword_3.wav");
-    efeitos[3] = LoadSound("C:\\Users\\luant\\Desktop\\ProjetoPasta\\.vscode\\Assets\\Sapons_21_orc_damage_3.wav");
+    efeitos[0] = LoadSound("./Assets/Sapons_07_human_atk_sword_1.wav");
+    efeitos[1] = LoadSound("./Assets/Sapons_07_human_atk_sword_2.wav");
+    efeitos[2] = LoadSound("./Assets/Sapons_07_human_atk_sword_3.wav");
+    efeitos[3] = LoadSound("./Assets/Sapons_21_orc_damage_3.wav");
 
      for(int p=0; p<4;p++){
         SetSoundVolume(efeitos[p],0.24);
