@@ -12,13 +12,13 @@ int abrirMenu(){
     int bloqueador = 0;
     int fechar = 0;
     
-    Sound Menu = LoadSound("C:\\Users\\luant\\Desktop\\ProjetoPasta\\.vscode\\Assets\\21 - Dream.wav");
+    Sound Menu = LoadSound("./Assets/21 - Dream.wav");
     SetSoundVolume(Menu, 0.18);
 
     InitWindow(screen_weight, screen_height , "raylib [core] example - keyboard input");
 
-    Texture2D menu = LoadTexture("C:\\Users\\luant\\Desktop\\ProjetoPasta\\.vscode\\Assets\\Menu.png");        // Carrega as texturas a partir de imagens da galeria
-    Texture2D tutorial = LoadTexture("C:\\Users\\luant\\Desktop\\ProjetoPasta\\.vscode\\Assets\\Tutorial.png");
+    Texture2D menu = LoadTexture("./Assets/Menu.png");        // Carrega as texturas a partir de imagens da galeria
+    Texture2D tutorial = LoadTexture("./Assets/Tutorial.png");
     SetTargetFPS(60);
     
     PlaySound(Menu);
@@ -65,7 +65,7 @@ void abrirGameOver(int **morreu, Sound **Tema){
 
     const int screen_weight = 1600;
     const int screen_height = 800;
-    Texture2D GameOver = LoadTexture("C:\\Users\\luant\\Desktop\\ProjetoPasta\\.vscode\\Assets\\GameOver.png");
+    Texture2D GameOver = LoadTexture("./Assets/GameOver.png");
     SetTargetFPS(60);
     **morreu = 1;
 
@@ -85,7 +85,7 @@ void menuVitoria(int time, int* venceu, Sound* Tema){
         StopSound(*Tema);
         const int screen_weight = 1600;
         const int screen_height = 800;
-        Texture2D Vitoria = LoadTexture("C:\\Users\\luant\\Desktop\\ProjetoPasta\\.vscode\\Assets\\Vitoria.png");
+        Texture2D Vitoria = LoadTexture("./Assets/Vitoria.png");
         SetTargetFPS(60);
         *venceu = 1;
 
